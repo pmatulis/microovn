@@ -27,7 +27,9 @@ extensions = [
     'sphinxext.opengraph',
     'myst_parser',
     'sphinxcontrib.jquery',
-    'notfound.extension'
+    'notfound.extension',
+    'metapensiero.sphinx.d2',
+    'sphinx.ext.intersphinx'
 ]
 extensions.extend(custom_extensions)
 

@@ -157,9 +157,9 @@ html_static_path = ['.sphinx/_static']
 html_css_files = [
     'custom.css',
     'header.css',
-    'github_issue_links.css'
+    'github_issue_links.css',
+    'furo_colors.css'
 ]
-    # 'furo_colors.css'
 html_css_files.extend(custom_html_css_files)
 
 html_js_files = ['header-nav.js']

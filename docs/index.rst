@@ -2,6 +2,9 @@
 Reference
 =========
 
+Cilium is an open source project that warmly welcomes community projects,
+contributions, suggestions, fixes and constructive feedback.
+
 .. mermaid::
 
    ---
@@ -14,19 +17,18 @@ Reference
    flowchart LR
 
    A(("RTD"))
-   B(["OVN main"])
+   B(["reference"])
 
    A --> B
-
-MicroOVN is a member of the Ubuntu family. It's an open source project that
-warmly welcomes community projects, contributions, suggestions, fixes and
-constructive feedback.
 
 .. toctree::
    :hidden:
    :maxdepth: 2
 
+   Overview of Isovalent Cilium Enterprise <https://isovalent-microovn.readthedocs-hosted.com/en/latest>
    Operations guide <https://isovalent-microovn.readthedocs-hosted.com/en/latest>
    Configuration guide <https://isovalent-microovn.readthedocs-hosted.com/en/latest>
    User guide <https://isovalent-microovn.readthedocs-hosted.com/en/latest>
+   Isovalent product security <https://isovalent-microovn.readthedocs-hosted.com/en/latest>
+   Isovalent customer support <https://isovalent-microovn.readthedocs-hosted.com/en/latest>
    reference/index

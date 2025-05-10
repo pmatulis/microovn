@@ -19,7 +19,7 @@ import datetime
 ############################################################
 
 # Product name
-project = 'MicroOVN'
+project = 'Isovalent Enterprise'
 author = 'Canonical Group Ltd'
 
 # The title you want to display for the documentation in the sidebar.
@@ -47,11 +47,11 @@ copyright = '%s, %s' % (datetime.date.today().year, author)
 ## when linking to the documentation from another website (see https://ogp.me/)
 # The URL where the documentation will be hosted (leave empty if you
 # don't know yet)
-ogp_site_url = "https://microovn.readthedocs-hosted.com/"
+# ogp_site_url = "https://microovn.readthedocs-hosted.com/"
 # The documentation website name (usually the same as the product name)
-ogp_site_name = project
+# ogp_site_name = project
 # The URL of an image or logo that is used in the preview
-ogp_image = 'https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg'
+# ogp_image = 'https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg'
 
 # Update with the local path to the favicon for your product
 # (default is the circle of friends)
@@ -65,7 +65,7 @@ html_context = {
     # For example: "ubuntu.com/lxd" or "microcloud.is"
     # If there is no product website, edit the header template to remove the
     # link (see the readme for instructions).
-    'product_page': 'documentation.ubuntu.com',
+    # 'product_page': 'documentation.ubuntu.com',
 
     # Add your product tag (the orange part of your logo, will be used in the
     # header) to ".sphinx/_static" and change the path here (start with "_static")
@@ -75,10 +75,10 @@ html_context = {
     # Change to the discourse instance you want to be able to link to
     # using the :discourse: metadata at the top of a file
     # (use an empty value if you don't want to link)
-    'discourse': 'https://discourse.ubuntu.com/c/microovn/support/164',
+    # 'discourse': 'https://discourse.ubuntu.com/c/microovn/support/164',
 
     # Change to the GitHub URL for your project
-    "github_url": "https://github.com/canonical/microovn",
+    # "github_url": "https://github.com/canonical/microovn",
 
     # Change to the branch for this version of the documentation
     'github_version': 'main',

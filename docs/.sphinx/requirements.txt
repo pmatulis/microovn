@@ -1,4 +1,5 @@
 furo
+pydata-sphinx-theme
 linkify-it-py
 lxd-sphinx-extensions
 myst-parser

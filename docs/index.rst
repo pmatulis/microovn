@@ -6,6 +6,22 @@ Cilium is an open source project that warmly welcomes community projects,
 contributions, suggestions, fixes and constructive feedback and :doc:`Reference
 <reference:index>`.
 
+.. mermaid::
+
+   ---
+   config:
+     theme: default
+     look: handDrawn
+     layout: elk
+   ---
+
+   flowchart LR
+
+   A(("RTD"))
+   B(["main"])
+
+   A --> B
+
 .. toctree::
    :hidden:
    :maxdepth: 2

@@ -54,16 +54,16 @@ constructive feedback.
    flowchart TD
 
    subgraph S1["vSphere"]
-          A(["ILB Management"])
+          A(["ILB Management VM"])
 
      subgraph S2["ILB"]
-            B["T1"]
-            C["T2"]
-            D["T2"]
-            E["Aux"]
+            B["T1 VM"]
+            C["T2 VM"]
+            D["T2 VM"]
+            E["Aux VM"]
      end
 
-     F(["Backend"])
+     F(["Backend VM"])
 
    end
 

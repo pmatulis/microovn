@@ -139,7 +139,7 @@ if builder == 'dirhtml' or builder == 'html':
     templates_path = ['.sphinx/_templates']
 
 # Theme configuration
-html_theme = 'furo'
+html_theme = 'pydata_sphinx_theme'
 html_last_updated_fmt = ''
 html_permalinks_icon = '¶'
 

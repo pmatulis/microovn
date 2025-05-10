@@ -4,7 +4,6 @@ Service Control
 
 Service control refers to the set of commands for enabling and disabling a
 given MicroOVN service. MicroOVN has a set of services referred to here
-:doc:`Services Reference </reference/services>`, which are responsible for
 handling core functionality.
 
 You can disable services manually using snap, but the service control does not

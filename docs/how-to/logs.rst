@@ -2,8 +2,6 @@
 Accessing logs
 ==============
 
-The :ref:`MicroOVN services` provide logs as part of their normal operation.
-
 By default they are provided through the systemd journal, and can be accessed
 through the use of the ``journalctl`` or ``snap logs`` commands.
 

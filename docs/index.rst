@@ -26,8 +26,10 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    :hidden:
    :maxdepth: 2
 
-   how-to/index
-   tutorial/index
-   explanation/index
-   developers/index
-   Reference <https://isovalent-microovn.readthedocs-hosted.com/projects/reference>
+   Overview of Isovalent Cilium Enterprise <how-to/index>
+   Operations guide <tutorial/index>
+   Configuration guide <explanation/index>
+   User guide <developers/index>
+   Isovalent product security <security/index>
+   Isovalent customer support <support/index>
+   Reference <https://isovalent-microovn.readthedocs-hosted.com/projects/reference/en/latest/>

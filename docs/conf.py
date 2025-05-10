@@ -18,28 +18,47 @@ from custom_conf import *
 extensions = [
     'sphinx_design',
     'sphinx_tabs.tabs',
-    'sphinx_reredirects',
-    'youtube-links',
+    # 'sphinx_reredirects',
+    # 'youtube-links',
     'related-links',
     'custom-rst-roles',
-    'terminal-output',
+    # 'terminal-output',
     'sphinx_copybutton',
-    'sphinxext.opengraph',
-    'myst_parser',
-    'sphinxcontrib.jquery',
-    'notfound.extension',
-    'metapensiero.sphinx.d2',
-    'sphinx.ext.intersphinx'
+    # 'sphinxext.opengraph',
+    # 'myst_parser',
+    # 'sphinxcontrib.jquery',
+    # 'notfound.extension',
+    # 'metapensiero.sphinx.d2',
+    'sphinx.ext.intersphinx',
+    'sphinxcontrib.mermaid'
 ]
 extensions.extend(custom_extensions)
 
 ### Configuration for extensions
 
+# Intersphinx
+intersphinx_mapping = {
+    "reference": ("https://isovalent-microovn.readthedocs-hosted.com/projects/reference/en/latest/", None),
+}
+# Prevent resolving of references to external locations.
+# https://www.sphinx-doc.org/usage/extensions/intersphinx.html#confval-intersphinx_disabled_reftypes
+intersphinx_disabled_reftypes = ["*"]
+
+# Mermaid and sphinxcontrib-mermaid
+mermaid_version = "11.6.0"
+
+# D2 defaults
+# d2_layout = 'elk'   # layout engine - 'elk' or 'dagre'
+# d2_sketch = True    # less straight lines
+# d2_theme = 4        # theme - https://d2lang.com/tour/themes
+# d2_scale = 1.0      # image scaling
+# d2_pad = 32         # image padding
+
 # Additional MyST syntax
 myst_enable_extensions = [
-    'substitution',
-    'deflist',
-    'linkify'
+    # 'substitution',
+    # 'deflist',
+    # 'linkify'
 ]
 myst_enable_extensions.extend(custom_myst_extensions)
 

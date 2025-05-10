@@ -12,4 +12,3 @@ sphinx-reredirects
 sphinx-tabs
 sphinxcontrib-jquery
 sphinxext-opengraph
-metapensiero.sphinx.d2

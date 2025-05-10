@@ -37,14 +37,15 @@ extensions.extend(custom_extensions)
 ### Configuration for extensions
 
 # Intersphinx
-# intersphinx_mapping = {
-#     "v116": ("https://docs.isovalent.com/v1.16/", None),
-#     "v115": ("https://docs.isovalent.com/v1.15/", None),
-#     "v114": ("https://docs.isovalent.com/v1.14/", None),
-# }
+intersphinx_mapping = {
+    "latest": ("https://isovalent-microovn.readthedocs-hosted.com/en/latest/", None),
+    "v116":   ("https://isovalent-microovn.readthedocs-hosted.com/en/v1.16/", None),
+    "v115":   ("https://isovalent-microovn.readthedocs-hosted.com/en/v1.15/", None),
+    "v114":   ("https://isovalent-microovn.readthedocs-hosted.com/en/v1.14/", None),
+}
 # Prevent resolving of references to external locations.
 # https://www.sphinx-doc.org/usage/extensions/intersphinx.html#confval-intersphinx_disabled_reftypes
-# intersphinx_disabled_reftypes = ["*"]
+intersphinx_disabled_reftypes = ["*"]
 
 # Mermaid and sphinxcontrib-mermaid
 mermaid_version = "11.6.0"

@@ -98,7 +98,6 @@ This service maps directly to the ``OVN Southbound`` database/service.
 This service is a recurring process that runs once a day between ``02:00`` and
 ``02:30``. It triggers TLS certification reissue for certificates that are
 nearing the expiration. For more information see the
-:ref:`certificates lifecycle <certificates_lifecycle>`.
 
 ``microovn.switch``
 -------------------

@@ -28,7 +28,7 @@ Product lifetime
 ----------------
 The main components of MicroOVN, Open vSwitch (OVS) and Open Virtual Network
 (OVN), comes from the Ubuntu distribution.  Releases of MicroOVN in stable
-:ref:`snap channels` that align with Ubuntu Long Term Support (LTS) releases,
+that align with Ubuntu Long Term Support (LTS) releases,
 receive the same level of support throughout the lifetime of the corresponding
 Ubuntu LTS release.  Please refer to the `Ubuntu lifecycle and release
 cadence`_ documentation for more information.
@@ -44,14 +44,8 @@ Vulnerabilities are classified by `priority`_, and the MicroOVN project
 guarantees response to all High and Critical severity vulnerabilities, as well
 as any `Known Exploited Vulnerability`_.
 
-Security updates will be made available to consumers of stable :ref:`snap
-channels` that align with supported Ubuntu Long Term Support (LTS) releases.
-
 The MicroOVN snap is automatically rebuilt by Launchpad whenever there is an
 update to the underlying packages in the Ubuntu distribution.
-
-Updated versions of the snap will be put through the MicroOVN functional test
-suites before being promoted to stable :ref:`snap channels`.
 
 Information about new builds are made available through the `Snap store`_.
 

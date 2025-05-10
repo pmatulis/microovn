@@ -2,31 +2,6 @@
 MicroOVN
 ========
 
-.. d2::
-
-   vars: {
-     d2-config: {
-       theme-id: 6
-       sketch: true
-     }
-   }
-
-   direction: right
-
-   RTD: {
-     shape: image
-     icon: https://icons.terrastruct.com/tech/022-server.svg
-     }
-
-   v115: {
-   shape: image
-   icon: https://icons.terrastruct.com/dev/github.svg
-   }
-
-   RTD -> v115
-
----------------------
-
 MicroOVN is a member of the Ubuntu family. It's an open source project that
 warmly welcomes community projects, contributions, suggestions, fixes and
 constructive feedback.

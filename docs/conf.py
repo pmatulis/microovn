@@ -38,7 +38,9 @@ extensions.extend(custom_extensions)
 
 # Intersphinx
 intersphinx_mapping = {
-    "reference": ("https://isovalent-microovn.readthedocs-hosted.com/projects/reference/latest/", None),
+    "v114": ("https://isovalent-microovn.readthedocs-hosted.com/v1.14/", None),
+    "v115": ("https://isovalent-microovn.readthedocs-hosted.com/v1.15/", None),
+    "v116": ("https://isovalent-microovn.readthedocs-hosted.com/v1.16/", None),
 }
 # Prevent resolving of references to external locations.
 # https://www.sphinx-doc.org/usage/extensions/intersphinx.html#confval-intersphinx_disabled_reftypes

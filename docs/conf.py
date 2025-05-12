@@ -145,7 +145,6 @@ html_permalinks_icon = '¶'
 
 if html_title == '':
     html_theme_options = {
-        "sidebar_hide_name": True,
         "navbar_start": ["navbar-logo", "version-switcher"],
         "switcher": {
             "json_url":

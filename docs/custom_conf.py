@@ -20,7 +20,7 @@ import datetime
 
 # Product name
 project = 'Isovalent Enterprise'
-author = 'Canonical Group Ltd'
+author = 'Peter'
 
 # The title you want to display for the documentation in the sidebar.
 # You might want to include a version number here.

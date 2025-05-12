@@ -12,15 +12,25 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    config:
      theme: default
      look: handDrawn
-     layout: elk
+     layout: dagre
    ---
 
-   flowchart LR
+   flowchart TD
 
    A(("RTD"))
-   B(["v1.15"])
+   B(["v1.14"])
+   C(["v1.15"])
+   D(["v1.16"])
+   E(["reference"])
+   F(["main"])
 
    A --> B
+   A --> C
+   A --> D
+   A --> E
+   A --> F
+
+   style C fill:#BBDEFB
 
 .. toctree::
    :hidden:

@@ -138,24 +138,23 @@ if '-b' in sys.argv:
 # if builder == 'dirhtml' or builder == 'html':
 #     templates_path = ['.sphinx/_templates']
 
+cilium_version = open("CILIUM_VERSION", "r").read().strip()
+cilium_release = cilium_version[:cilium_version.rfind(".")]
+isovalent_doc_version = "v" + cilium_release
+
 # Theme configuration
 html_theme = 'pydata_sphinx_theme'
 html_last_updated_fmt = ''
 html_permalinks_icon = '¶'
 
-if html_title == '':
-    html_theme_options = {
-        "navbar_start": ["navbar-logo", "version-switcher"],
-        "switcher": {
-            "json_url":
-                "https://isovalent-microovn.readthedocs-hosted.com/projects/reference/_static/switcher.json",
-            # "version_match": isovalent_doc_version,
-        }
+html_theme_options = {
+    "navbar_start": ["navbar-logo", "version-switcher"],
+    "switcher": {
+        "json_url":
+            "https://isovalent-microovn.readthedocs-hosted.com/projects/reference/_static/switcher.json",
+        "version_match": isovalent_doc_version
     }
-
-# cilium_version = open("CILIUM_VERSION", "r").read().strip()
-# cilium_release = cilium_version[:cilium_version.rfind(".")]
-# isovalent_doc_version = "v" + cilium_release
+}
 
 ############################################################
 ### Additional files

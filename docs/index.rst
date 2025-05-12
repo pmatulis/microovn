@@ -23,6 +23,13 @@ contributions, suggestions, fixes and constructive feedback.
    E(["reference"])
    F(["main"])
 
+   click A "https://app.readthedocs.com/organizations/isovalent/"
+   click B "https://isovalent-microovn.readthedocs-hosted.com/v1.14"
+   click C "https://isovalent-microovn.readthedocs-hosted.com/v1.15"
+   click D "https://isovalent-microovn.readthedocs-hosted.com/v1.16"
+   click E "https://isovalent-microovn.readthedocs-hosted.com/projects/reference"
+   click F "https://isovalent-microovn.readthedocs-hosted.com/latest"
+
    A --> B
    A --> C
    A --> D

@@ -1,4 +1,4 @@
-furo
+# furo
 linkify-it-py
 lxd-sphinx-extensions
 myst-parser
@@ -13,3 +13,4 @@ sphinx-tabs
 sphinxcontrib-jquery
 sphinxext-opengraph
 sphinxcontrib-mermaid
+pydata-sphinx-theme

@@ -145,8 +145,17 @@ html_permalinks_icon = '¶'
 
 if html_title == '':
     html_theme_options = {
-        'sidebar_hide_name': True
+        'sidebar_hide_name': True,
+        'switcher': {
+            "json_url":
+                "https://isovalent-microovn.readthedocs-hosted.com/projects/reference/_static/switcher.json",
+            "version_match": isovalent_doc_version,
         }
+    }
+
+cilium_version = open("CILIUM_VERSION", "r").read().strip()
+cilium_release = cilium_version[:cilium_version.rfind(".")]
+isovalent_doc_version = "v" + cilium_release
 
 ############################################################
 ### Additional files
@@ -158,8 +167,8 @@ html_css_files = [
     'custom.css',
     'header.css',
     'github_issue_links.css',
-    'furo_colors.css'
 ]
+    # 'furo_colors.css'
 html_css_files.extend(custom_html_css_files)
 
 html_js_files = ['header-nav.js']

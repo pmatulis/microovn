@@ -22,11 +22,13 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    C(["v1.15"])
    D(["v1.16"])
    E(["reference"])
+   F(["main"])
 
    A --> B
    A --> C
    A --> D
    A --> E
+   A --> F
 
    style D fill:#BBDEFB
 

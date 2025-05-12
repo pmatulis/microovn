@@ -42,4 +42,4 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    User guide <developers/index>
    Isovalent product security <security/index>
    Isovalent customer support <support/index>
-   Reference <https://isovalent-microovn.readthedocs-hosted.com/projects/reference/en/latest/>
+   Reference <https://isovalent-microovn.readthedocs-hosted.com/projects/reference/>

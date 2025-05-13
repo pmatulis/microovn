@@ -1,5 +1,4 @@
 # Minimal makefile for Sphinx documentation
-#
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
@@ -17,6 +16,7 @@ help: $(VENVDIR)
 	@. $(VENV); $(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 .PHONY: help
+
 
 # Explicit target avoids fall-through to the "Makefile" target.
 $(SPHINXDIR)/requirements.txt:
@@ -40,17 +40,9 @@ $(VENVDIR): $(SPHINXDIR)/requirements.txt
         "* clean built doc files: make clean-doc \n" \
         "* clean full environment: make clean \n" \
         "* check spelling: make spelling \n" \
-        "* check inclusive language: make woke \n" \
         "* other possible targets: make <press TAB twice> \n" \
         "--------------------------------------------------------------- \n"
 	@touch $(VENVDIR)
-
-
-woke-install:
-	@type woke >/dev/null 2>&1 || \
-        { echo "Installing \"woke\" snap... \n"; sudo snap install woke; }
-
-.PHONY:  woke-install
 
 
 install: $(VENVDIR)
@@ -111,14 +103,6 @@ linkcheck: install
 	$(SPHINXOPTS)
 
 .PHONY: linkcheck
-
-
-woke: woke-install
-	woke *.rst **/*.rst \
-		--exit-1-on-failure \
-        -c https://github.com/canonical/Inclusive-naming/raw/main/config.yml
-
-.PHONY: woke
 
 
 # Catch-all target: route all unknown targets to Sphinx using the new

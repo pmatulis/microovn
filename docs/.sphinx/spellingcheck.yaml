@@ -1,16 +1,16 @@
 matrix:
-- name: rST files
+- name: default
   aspell:
     lang: en
-    d: en_GB
+    d: en_US
   dictionary:
     wordlists:
     - .wordlist.txt
-    - .custom_wordlist.txt
     output: .sphinx/.wordlist.dic
   sources:
   - _build/**/*.html
   pipeline:
+  - pyspelling.filters.url:
   - pyspelling.filters.html:
       comments: false
       attributes:

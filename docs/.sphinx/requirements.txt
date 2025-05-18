@@ -1,8 +1,8 @@
 sphinx
 sphinx-autobuild
-sphinx-reredirects
-sphinx-tabs
-sphinxcontrib-mermaid
+pydata-sphinx-theme
 sphinxcontrib-spelling
-furo
-myst-parser
+## sphinx-reredirects
+# sphinx-tabs
+# sphinxcontrib-mermaid
+# myst-parser

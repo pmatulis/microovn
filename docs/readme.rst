@@ -20,6 +20,11 @@ Use the ``install`` make target to set up your local environment:
 This will create a virtual environment (``.sphinx/venv``) and install
 dependency software (``.sphinx/requirements.txt``) within it.
 
+**Note**: The starter pack uses the latest compatible version of all tools and
+does not pin its requirements. This might change temporarily if there is an
+incompatibility with a new tool version. There is therefore no need in using a
+tool like Renovate to automatically update the requirements.
+
 View the documentation
 ----------------------
 
@@ -84,10 +89,7 @@ False-positive misspellings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To add exceptions for words the spellcheck incorrectly marks as wrong, edit the
-``.custom_wordlist.txt`` file.
-
-File ``.wordlist.txt`` should not be touched since it is maintained centrally.
-It contains words that apply across all projects.
+``.wordlist.txt`` file.
 
 Unwanted link checks
 ~~~~~~~~~~~~~~~~~~~~
@@ -97,3 +99,9 @@ in the ``conf.py`` file. Example reasons for doing this include:
 
 * the links are local
 * the validation of the links causes errors for no good reason
+
+HTML redirects
+~~~~~~~~~~~~~~
+
+HTML redirects can be added to ensure that old links continue to work when you
+move files around.

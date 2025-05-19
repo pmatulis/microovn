@@ -1,9 +1,10 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-import sys
 import os
+import sys
+import subprocess
 
-project = 'Isovalent Networking for Kubernetes'
+project = 'Some project'
 copyright = 'Isovalent'
 author = 'Isovalent'
 
@@ -90,9 +91,9 @@ exclude_patterns = [
 # ]
 
 ## Often-used links
-rst_epilog = '''
-.. include:: /reuse/links.txt
-'''
+# rst_epilog = '''
+# .. include:: /reuse/links.txt
+# '''
 
 ## reStructuredText and Markdown extensions
 source_suffix = {
@@ -101,16 +102,16 @@ source_suffix = {
 }
 
 ## Linkchecker
-linkcheck_anchors_ignore_for_url = [
-    r'https://github\.com/.*'
-]
+# linkcheck_anchors_ignore_for_url = [
+#     r'https://github\.com/.*'
+# ]
 
-linkcheck_ignore = [
-    r'.*cisa\.gov.*'
-]
+# linkcheck_ignore = [
+#     r'.*cisa\.gov.*'
+# ]
 
-linkcheck_timeout = 120
-linkcheck_retries = 3
+# linkcheck_timeout = 120
+# linkcheck_retries = 3
 
 # ----------------------------------------------------------
 # Styling
@@ -125,7 +126,7 @@ html_copy_source = False                        # link to the current page's raw
 # Paths (relative to this directory) to custom static files. A custom file will
 # overwrite an identically named built-in file.
 html_static_path = ["_static"]
-# html_css_files = ["css/custom.css"]             # these files are always relative to 'html_static_path'
+html_css_files = ["css/custom.css"]             # files are relative to 'html_static_path'
 
 # For the primary (section) sidebar (LHS menu), map page names
 #   to template names - a null value removes the menu
@@ -133,22 +134,39 @@ html_sidebars = {
     "some/page/with/no/menu": []
 }
 
-## Theme-specific configuration
+### Theme-specific configuration
 # https://pydata-sphinx-theme.readthedocs.io
-# built-in components: https://is.gd/xibtfW
+# components: https://is.gd/xibtfW
 html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
     "logo": {
         "image_light": "_static/images/isovalent-logo-light-theme.png", # light mode logo
         "image_dark": "_static/images/isovalent-logo-dark-theme.png"    # dark mode logo
     },
-    "navbar_start": ["navbar-logo"],            # built-in components to use at start of navbar
-    "navbar_center": ["navbar-nav"],            # built-in components to use in the middle of navbar
-    "header_links_before_dropdown": 8,          # number of links in header before spilling over into the "More" dropdown
-    "primary_sidebar_end": [],                  # templates to use below the primary (section) sidebar (LHS menu)
+    "external_links": [
+        {"name": "Kubernetes", "url": "https://kubernetes.io"},         # miscellaneous external links
+        {"name": "Docker", "url": "https://docker.com"},
+        {"name": "Linux", "url": "https://linux.org"}
+    ],
+    "navbar_start": ["navbar-logo"],            # components displayed at start of navbar
+    "navbar_center": ["navbar-nav"],            # components displayed at middle of navbar
+    "navbar_persistent": ["search-field"],      # components displayed to the left of navbar_end; always visible
+    "navbar_end": [],                           # components displayed at end of navbar
+    "header_links_before_dropdown": 6,          # number of links in header before spilling over into the "More" dropdown
     "navigation_depth": 5,                      # maximum depth for menu dropdowns in the primary sidebar
+    "primary_sidebar_end": [],                  # templates to use underneath the primary (section) sidebar (LHS menu)
     "secondary_sidebar_items": ["page-toc"],    # templates to use within the secondary (page) sidebar (RHS menu)
-    "show_prev_next": False,                    # show previous and next buttons at the bottom of a page's content
+    "show_prev_next": False,                    # show previous and next buttons
+    "back_to_top_button": False,                # show floating back-to-top button
     "footer_start": ["copyright"],              # built-in components to use at start of footer
-    "footer_end": []                            # built-in components to use at end of footer
+    "footer_end": [],                           # built-in components to use at end of footer
+    "surface_warnings": False                   # display theme warnings, deprecations, etc
 }
+
+## Add an announcement banner if the local branch is 'main' - the doc dev release
+# command = ["git", "branch", "--show-current"]
+# process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+# stdout, stderr = process.communicate()
+# branch = stdout.strip()
+# if branch == "pristine":
+#     html_theme_options["announcement"] = "<b>Attention:</b> This is an announcement."

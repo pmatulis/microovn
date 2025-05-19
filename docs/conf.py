@@ -8,12 +8,6 @@ project = 'Some project'
 copyright = 'Isovalent'
 author = 'Isovalent'
 
-# Needed for sphinx.ext.extlinks
-# Variable CILIUM_VERSION is located in the root of the docs directory
-# cilium_version = open("CILIUM_VERSION", "r").read().strip()
-# cilium_release = cilium_version[:cilium_version.rfind(".")]
-# cilium_doc_version = "v" + cilium_release
-
 # ----------------------------------------------------------
 # Extensions
 # ----------------------------------------------------------
@@ -163,10 +157,10 @@ html_theme_options = {
     "surface_warnings": False                   # display theme warnings, deprecations, etc
 }
 
-## Add an announcement banner if the local branch is 'main' - the doc dev release
+## Add an announcement banner if the local branch is 'main'
 # command = ["git", "branch", "--show-current"]
 # process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 # stdout, stderr = process.communicate()
 # branch = stdout.strip()
-# if branch == "pristine":
+# if branch == "main":
 #     html_theme_options["announcement"] = "<b>Attention:</b> This is an announcement."

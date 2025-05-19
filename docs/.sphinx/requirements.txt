@@ -1,7 +1,7 @@
 sphinx
 sphinx-autobuild
 pydata-sphinx-theme
-sphinxcontrib-spelling
+# sphinxcontrib-spelling
 ## sphinx-reredirects
 # sphinx-tabs
 # sphinxcontrib-mermaid

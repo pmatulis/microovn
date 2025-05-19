@@ -1,8 +1,8 @@
-====================
-Isovalent Enterprise
-====================
+===================================
+Isovalent Networking for Kubernetes
+===================================
 
-Cilium is an open source project that warmly welcomes community projects,
+Cilium is an open source project that welcomes community projects,
 contributions, suggestions, fixes and constructive feedback and :doc:`Reference
 <reference:index>`.
 
@@ -23,6 +23,8 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    D(["v1.16"])
    E(["reference"])
    F(["main"])
+   G(["public"])
+   H(["pristine"])
 
    click A "https://app.readthedocs.com/organizations/isovalent/"
    click B "https://isovalent-microovn.readthedocs-hosted.com/v1.14"
@@ -30,18 +32,20 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    click D "https://isovalent-microovn.readthedocs-hosted.com/v1.16"
    click E "https://isovalent-microovn.readthedocs-hosted.com/projects/reference"
    click F "https://isovalent-microovn.readthedocs-hosted.com/latest"
+   click G "https://isovalent-microovn.readthedocs-hosted.com/public"
+   click H "https://isovalent-microovn.readthedocs-hosted.com/pristine"
 
    A --> B
    A --> C
    A --> D
    A --> E
    A --> F
+   A --> G
+   A --> H
 
    style C fill:#BBDEFB
 
 .. toctree::
-   :hidden:
-   :maxdepth: 2
 
    Overview of Isovalent Cilium Enterprise <how-to/index>
    Operations guide <tutorial/index>

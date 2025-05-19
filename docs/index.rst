@@ -21,8 +21,8 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    B(["v1.14"])
    C(["v1.15"])
    D(["v1.16"])
-   E(["reference"])
-   F(["main"])
+   E(["main"])
+   F(["reference"])
    G(["public"])
    H(["pristine"])
 
@@ -30,8 +30,8 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    click B "https://isovalent-microovn.readthedocs-hosted.com/v1.14"
    click C "https://isovalent-microovn.readthedocs-hosted.com/v1.15"
    click D "https://isovalent-microovn.readthedocs-hosted.com/v1.16"
-   click E "https://isovalent-microovn.readthedocs-hosted.com/projects/reference"
-   click F "https://isovalent-microovn.readthedocs-hosted.com/latest"
+   click E "https://isovalent-microovn.readthedocs-hosted.com/latest"
+   click F "https://isovalent-microovn.readthedocs-hosted.com/projects/reference"
    click G "https://isovalent-microovn.readthedocs-hosted.com/public"
    click H "https://isovalent-microovn.readthedocs-hosted.com/pristine"
 
@@ -43,7 +43,7 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    A --> G
    A --> H
 
-   style F fill:#BBDEFB
+   style E fill:#BBDEFB
 
 .. toctree::
 

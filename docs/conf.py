@@ -1,5 +1,4 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
-
 import os
 import sys
 import subprocess
@@ -128,6 +127,7 @@ html_css_files = ["css/custom.css"]             # files are relative to 'html_st
 # For the primary (section) sidebar (LHS menu), map page names
 #   to template names - a null value removes the menu
 html_sidebars = {
+    "**": ["sidebar-nav-bs"],
     "some/page/with/no/menu": []
 }
 
@@ -160,7 +160,7 @@ html_theme_options = {
     "surface_warnings": False                   # display theme warnings, deprecations, etc
 }
 
-## Add an announcement banner if the local branch is 'main' - the dev release
+## Add an announcement banner if the local branch is 'main'
 command = ["git", "branch", "--show-current"]
 process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 stdout, stderr = process.communicate()

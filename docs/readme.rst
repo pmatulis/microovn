@@ -4,9 +4,6 @@
 Working with the documentation
 ==============================
 
-**Note:** This page is for documentation contributors. It assumes that this
-repository has been enabled for doc builds as described in file ``setup.rst``.
-
 There are make targets defined in the documentation ``Makefile`` file that set
 up your local environment and allow you to view the documentation. You may also
 need to occasionally change the build configuration as new content is added.
@@ -74,15 +71,6 @@ Ensure that there are no spelling mistakes:
 
    make spelling
 
-Inclusive language check
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Perform a check for non-inclusive language:
-
-.. code-block:: none
-
-   make woke
-
 Link check
 ~~~~~~~~~~
 
@@ -101,10 +89,7 @@ False-positive misspellings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To add exceptions for words the spellcheck incorrectly marks as wrong, edit the
-``.custom_wordlist.txt`` file.
-
-File ``.wordlist.txt`` should not be touched since it is maintained centrally.
-It contains words that apply across all projects.
+``.wordlist.txt`` file.
 
 Unwanted link checks
 ~~~~~~~~~~~~~~~~~~~~
@@ -119,18 +104,4 @@ HTML redirects
 ~~~~~~~~~~~~~~
 
 HTML redirects can be added to ensure that old links continue to work when you
-move files around. To do so, specify the old and new paths in the ``redirects``
-setting in file ``custom_conf.py``.
-
-Customisation of inclusive language checks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-By default, the inclusive language check is applied only to reST files located
-under the documentation directory (usually ``docs``). To check Markdown files,
-for example, or to use a location other than the ``docs`` sub-tree, you must
-change how the ``woke`` tool is invoked from within ``docs/Makefile`` (see
-the `woke User Guide <https://docs.getwoke.tech/usage/#file-globs>`_ for help).
-
-Some circumstances may compel you to retain some non-inclusive words. In such
-cases you will need to create check exemptions for them. See file
-:doc:`help-woke` for how to do that.
+move files around.

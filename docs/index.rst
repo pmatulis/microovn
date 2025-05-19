@@ -2,7 +2,7 @@
 Reference
 =========
 
-Cilium is an open source project that warmly welcomes community projects,
+Cilium is an open source project that welcomes community projects,
 contributions, suggestions, fixes and constructive feedback.
 
 .. mermaid::
@@ -20,8 +20,8 @@ contributions, suggestions, fixes and constructive feedback.
    B(["v1.14"])
    C(["v1.15"])
    D(["v1.16"])
-   E(["reference"])
-   F(["main"])
+   E(["main"])
+   F(["reference"])
    G(["public"])
    H(["pristine"])
 
@@ -29,8 +29,8 @@ contributions, suggestions, fixes and constructive feedback.
    click B "https://isovalent-microovn.readthedocs-hosted.com/v1.14"
    click C "https://isovalent-microovn.readthedocs-hosted.com/v1.15"
    click D "https://isovalent-microovn.readthedocs-hosted.com/v1.16"
-   click E "https://isovalent-microovn.readthedocs-hosted.com/projects/reference"
-   click F "https://isovalent-microovn.readthedocs-hosted.com/latest"
+   click E "https://isovalent-microovn.readthedocs-hosted.com/latest"
+   click F "https://isovalent-microovn.readthedocs-hosted.com/projects/reference"
    click G "https://isovalent-microovn.readthedocs-hosted.com/public"
    click H "https://isovalent-microovn.readthedocs-hosted.com/pristine"
 
@@ -42,7 +42,7 @@ contributions, suggestions, fixes and constructive feedback.
    A --> G
    A --> H
 
-   style E fill:#BBDEFB
+   style F fill:#BBDEFB
 
 .. toctree::
 

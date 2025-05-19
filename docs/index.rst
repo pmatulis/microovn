@@ -22,6 +22,8 @@ contributions, suggestions, fixes and constructive feedback.
    D(["v1.16"])
    E(["reference"])
    F(["main"])
+   G(["public"])
+   H(["pristine"])
 
    click A "https://app.readthedocs.com/organizations/isovalent/"
    click B "https://isovalent-microovn.readthedocs-hosted.com/v1.14"
@@ -29,18 +31,20 @@ contributions, suggestions, fixes and constructive feedback.
    click D "https://isovalent-microovn.readthedocs-hosted.com/v1.16"
    click E "https://isovalent-microovn.readthedocs-hosted.com/projects/reference"
    click F "https://isovalent-microovn.readthedocs-hosted.com/latest"
+   click G "https://isovalent-microovn.readthedocs-hosted.com/public"
+   click H "https://isovalent-microovn.readthedocs-hosted.com/pristine"
 
    A --> B
    A --> C
    A --> D
    A --> E
    A --> F
+   A --> G
+   A --> H
 
    style E fill:#BBDEFB
 
 .. toctree::
-   :hidden:
-   :maxdepth: 2
 
    Overview of Isovalent Cilium Enterprise <https://isovalent-microovn.readthedocs-hosted.com/v1.16>
    Operations guide <https://isovalent-microovn.readthedocs-hosted.com/v1.16>

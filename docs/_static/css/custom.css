@@ -1,0 +1,130 @@
+html {
+  --pst-header-height: 64px;
+}
+
+.logo__image {
+  width: 150px !important;
+  height: auto !important;
+}
+
+.bd-links__title {
+  display: none;
+}
+
+a {
+  text-decoration-thickness: auto !important;
+}
+
+.bd-sidebar-primary .sidebar-primary-items__end {
+  margin-top: 0 !important;
+}
+
+@media (min-width: 960px) {
+  .nav-item:nth-child(3),
+  .nav-item:nth-child(6) {
+    border-right: 1px solid var(--pst-color-border-muted);
+    padding-right: 6px; /* default padding is 6 px, so add another 6 between the text and the border-right bar */
+  }
+}
+
+.version-switcher__container {
+  margin-left: 20px;
+}
+
+.sphinx-side-by-side {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.sphinx-side-by-side a {
+  text-decoration: none;
+}
+
+.sphinx-side-by-side > dl,
+.sphinx-side-by-side > p,
+.sphinx-side-by-side > .line-block,
+.sphinx-side-by-side > figure {
+  flex: 1;
+  padding: 18px;
+  margin-right: 10px !important;
+  border-radius: 8px;
+  background: linear-gradient(152deg, #F4F5FB -27.26%, #FFF 208.19%);
+  min-width: 240px;
+}
+
+html[data-theme="dark"] .sphinx-side-by-side {
+  color: var(--pst-color-text-base);
+}
+
+html[data-theme="dark"] .sphinx-side-by-side > dl,
+html[data-theme="dark"] .sphinx-side-by-side > p,
+html[data-theme="dark"] .sphinx-side-by-side > .line-block,
+html[data-theme="dark"] .sphinx-side-by-side > figure {
+  background: #32334B;
+}
+
+.sphinx-side-by-side > dl:last-child,
+.sphinx-side-by-side > p:last-child,
+.sphinx-side-by-side > .line-block:last-child,
+.sphinx-side-by-side > figure:last-child {
+  margin-right: 0  !important;
+}
+
+.sphinx-side-by-side figure .caption-text {
+  font-style: normal;
+}
+
+.sphinx-side-by-side figure figcaption p {
+  margin: 0 0 10px 0;
+}
+
+.sphinx-side-by-side figure .headerlink {
+  display: none;
+}
+
+.sphinx-side-by-side figure figcaption p:last-child {
+  margin-bottom: 0;
+}
+
+.sphinx-side-by-side img {
+  background: none !important;
+  border-radius: 0 !important;
+  filter: none !important;
+}
+
+.sphinx-side-by-side dd {
+  margin-left: 0;
+}
+
+iframe.video {
+  margin: 50px;
+}
+
+.no-bg, .no-bg * {
+  background: none !important;
+}
+
+.map p {
+  background-image: url("/_static/images/map_button_800.png") !important;
+  background-size: cover !important;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+
+.map a {
+  color: white;
+}
+
+.enterprise-button p {
+  background-image: url("/_static/images/isovalent_blue_banner.png") !important;
+  background-size: cover !important;
+  font-size: 2em;
+  text-align: center;
+}
+
+.enterprise-button a {
+  color: white;
+}

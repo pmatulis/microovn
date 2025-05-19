@@ -1,42 +1,46 @@
-import sys
-
-sys.path.append('./')
-from custom_conf import *
-
-# Configuration file for the Sphinx documentation builder.
-# You should not do any modifications to this file. Put your custom
-# configuration into the custom_conf.py file.
-# If you need to change this file, contribute the changes upstream.
-#
-# For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-############################################################
-### Extensions
-############################################################
+import os
+import sys
+import subprocess
+
+project = 'Isovalent Networking for Kubernetes'
+copyright = 'Isovalent'
+author = 'Isovalent'
+
+# Needed for sphinx.ext.extlinks
+# Variable CILIUM_VERSION is located in the root of the docs directory
+# cilium_version = open("CILIUM_VERSION", "r").read().strip()
+# cilium_release = cilium_version[:cilium_version.rfind(".")]
+# cilium_doc_version = "v" + cilium_release
+
+# ----------------------------------------------------------
+# Extensions
+# ----------------------------------------------------------
+
+sys.path.insert(0, os.path.abspath('_exts'))
+
+import side_by_side
+import auth_restricted_section
 
 extensions = [
-    'sphinx_design',
-    'sphinx_tabs.tabs',
-    # 'sphinx_reredirects',
-    # 'youtube-links',
-    'related-links',
-    'custom-rst-roles',
-    # 'terminal-output',
-    'sphinx_copybutton',
-    # 'sphinxext.opengraph',
     # 'myst_parser',
-    # 'sphinxcontrib.jquery',
-    # 'notfound.extension',
-    # 'metapensiero.sphinx.d2',
+    # 'sphinx_tabs.tabs',
+    # 'sphinx.ext.extlinks',
     'sphinx.ext.intersphinx',
-    'sphinxcontrib.mermaid'
+    'sphinxcontrib.mermaid',
+    #
+    # 'auth_restricted_section',
+    # 'feature_maturity_warnings',
+    # 'side_by_side',
+    #
+    # 'sphinxext.rediraffe',
+    # 'sphinx-copybutton',
+    # 'sphinx-notfound-page',
 ]
-extensions.extend(custom_extensions)
 
-### Configuration for extensions
-
-# Intersphinx
+# sphinx.ext.intersphinx
+# ----------------------
 intersphinx_mapping = {
     "reference": ("https://isovalent-microovn.readthedocs-hosted.com/projects/reference/", None),
 }
@@ -44,125 +48,122 @@ intersphinx_mapping = {
 # https://www.sphinx-doc.org/usage/extensions/intersphinx.html#confval-intersphinx_disabled_reftypes
 intersphinx_disabled_reftypes = ["*"]
 
-# Mermaid and sphinxcontrib-mermaid
+# sphinxcontrib.mermaid
+# ---------------------
 mermaid_version = "11.6.0"
 
-# D2 defaults
-# d2_layout = 'elk'   # layout engine - 'elk' or 'dagre'
-# d2_sketch = True    # less straight lines
-# d2_theme = 4        # theme - https://d2lang.com/tour/themes
-# d2_scale = 1.0      # image scaling
-# d2_pad = 32         # image padding
+# myst_parser
+# -----------
+# myst_enable_extensions = [
+#     'substitution',
+#     'colon_fence'
+# ]
+# myst_heading_anchors = 3
+# suppress_warnings = ["myst.header", "ref.myst"]
 
-# Additional MyST syntax
-myst_enable_extensions = [
-    # 'substitution',
-    # 'deflist',
-    # 'linkify'
-]
-myst_enable_extensions.extend(custom_myst_extensions)
+# sphinx.ext.extlinks
+# -------------------
+# github_repo = 'https://github.com/cilium/cilium/'
+# extlinks = {
+#     'cilium-doc': ('https://docs.cilium.io/en/' + cilium_doc_version + "%s", ''),
+#     'gh-issue': (github_repo + 'issues/%s', 'GitHub issue %s'),
+# }
 
-# Used for related links
-if not 'discourse_prefix' in html_context and 'discourse' in html_context:
-    html_context['discourse_prefix'] = html_context['discourse'] + '/t/'
-
-# The default for notfound_urls_prefix usually works, but not for
-# documentation on documentation.ubuntu.com
-if slug:
-    notfound_urls_prefix = '/' + slug + '/en/latest/'
-
-notfound_context = {
-    'title': 'Page not found',
-    'body': '<h1>Page not found</h1>\n\n<p>Sorry, but the documentation page that you are looking for was not found.</p>\n<p>Documentation changes over time, and pages are moved around. We try to redirect you to the updated content where possible, but unfortunately, that didn\'t work this time (maybe because the content you were looking for does not exist in this version of the documentation).</p>\n<p>You can try to use the navigation to locate the content you\'re looking for, or search for a similar page.</p>\n',
-}
-
-# Default image for OGP (to prevent font errors, see
-# https://github.com/canonical/sphinx-docs-starter-pack/pull/54 )
-if not 'ogp_image' in locals():
-    ogp_image = 'https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg'
-
-############################################################
-### General configuration
-############################################################
+# ----------------------------------------------------------
+# General configuration
+# ----------------------------------------------------------
 
 exclude_patterns = [
     '_build',
     'Thumbs.db',
     '.DS_Store',
-    '.sphinx',
+    '.sphinx'
 ]
-exclude_patterns.extend(custom_excludes)
 
-rst_epilog = '''
-.. include:: /reuse/links.txt
-'''
-if 'custom_rst_epilog' in locals():
-    rst_epilog = custom_rst_epilog
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This pattern also affects html_static_path and html_extra_path.
+# exclude_patterns = [
+#     '**/_includes/**',
+# ]
 
+## Often-used links
+# rst_epilog = '''
+# .. include:: /reuse/links.txt
+# '''
+
+## reStructuredText and Markdown extensions
 source_suffix = {
     '.rst': 'restructuredtext',
-    '.md': 'markdown',
+    '.md': 'markdown'
 }
 
-if not 'conf_py_path' in html_context and 'github_folder' in html_context:
-    html_context['conf_py_path'] = html_context['github_folder']
+## Linkchecker
+# linkcheck_anchors_ignore_for_url = [
+#     r'https://github\.com/.*'
+# ]
 
-# For ignoring specific links
-linkcheck_anchors_ignore_for_url = [
-    r'https://github\.com/.*'
-]
-linkcheck_anchors_ignore_for_url.extend(custom_linkcheck_anchors_ignore_for_url)
+# linkcheck_ignore = [
+#     r'.*cisa\.gov.*'
+# ]
 
-# this cisa.gov pages are so heavily refrenced the github CI for linkchecks is
-# being seen as a DDos, this is causing our linkcheck tests to fail so we have
-# to ignore it.
-linkcheck_ignore = [r'.*cisa\.gov.*']
+# linkcheck_timeout = 120
+# linkcheck_retries = 3
 
-linkcheck_timeout = 120
-linkcheck_retries = 3
+# ----------------------------------------------------------
+# Styling
+# ----------------------------------------------------------
 
-# Tags cannot be added directly in custom_conf.py, so add them here
-for tag in custom_tags:
-    tags.add(tag)
+html_favicon = '_static/images/favicon.png'     # browser favicon
+html_permalinks_icon = '🔗'                     # mouseover icon for page heading title links
+html_copy_source = False                        # link to the current page's raw source file
+                                                #   in the secondary (page) sidebar (RHS menu)
 
-############################################################
-### Styling
-############################################################
 
-# Find the current builder
-builder = 'dirhtml'
-if '-b' in sys.argv:
-    builder = sys.argv[sys.argv.index('-b')+1]
+# Paths (relative to this directory) to custom static files. A custom file will
+# overwrite an identically named built-in file.
+html_static_path = ["_static"]
+html_css_files = ["css/custom.css"]             # files are relative to 'html_static_path'
 
-# Setting templates_path for epub makes the build fail
-if builder == 'dirhtml' or builder == 'html':
-    templates_path = ['.sphinx/_templates']
+# For the primary (section) sidebar (LHS menu), map page names
+#   to template names - a null value removes the menu
+html_sidebars = {
+    "some/page/with/no/menu": []
+}
 
-# Theme configuration
-html_theme = 'furo'
-html_last_updated_fmt = ''
-html_permalinks_icon = '¶'
+### Theme-specific configuration
+# https://pydata-sphinx-theme.readthedocs.io
+# components: https://is.gd/xibtfW
+html_theme = 'pydata_sphinx_theme'
+html_theme_options = {
+    "logo": {
+        "image_light": "_static/images/isovalent-logo-light-theme.png", # light mode logo
+        "image_dark": "_static/images/isovalent-logo-dark-theme.png"    # dark mode logo
+    },
+    # "external_links": [
+    #     {"name": "Kubernetes", "url": "https://kubernetes.io"},         # miscellaneous external links
+    #     {"name": "Docker", "url": "https://docker.com"},
+    #     {"name": "Linux", "url": "https://linux.org"}
+    # ],
+    "navbar_start": ["navbar-logo"],            # display components at start of navbar
+    "navbar_center": ["navbar-nav"],            # display components at middle of navbar
+    "navbar_persistent": ["search-field"],      # display components to the left of navbar_end; always visible
+    "navbar_end": [],                           # display components at end of navbar
+    "header_links_before_dropdown": 6,          # number of links in header before spilling over into the "More" dropdown
+    "navigation_depth": 5,                      # maximum depth for menu dropdowns in the primary sidebar
+    "primary_sidebar_end": [],                  # templates to use underneath the primary (section) sidebar (LHS menu)
+    "secondary_sidebar_items": ["page-toc"],    # templates to use within the secondary (page) sidebar (RHS menu)
+    "show_prev_next": False,                    # show previous and next buttons
+    "back_to_top_button": False,                # show floating back-to-top button
+    "footer_start": ["copyright"],              # built-in components to use at start of footer
+    "footer_end": [],                           # built-in components to use at end of footer
+    "surface_warnings": False                   # display theme warnings, deprecations, etc
+}
 
-if html_title == '':
-    html_theme_options = {
-        'sidebar_hide_name': True
-        }
-
-############################################################
-### Additional files
-############################################################
-
-html_static_path = ['.sphinx/_static']
-
-html_css_files = [
-    'custom.css',
-    'header.css',
-    'github_issue_links.css',
-    'furo_colors.css'
-]
-html_css_files.extend(custom_html_css_files)
-
-html_js_files = ['header-nav.js']
-if 'github_issues' in html_context and html_context['github_issues'] and not disable_feedback_button:
-    html_js_files.append('github_issue_links.js')
-html_js_files.extend(custom_html_js_files)
+## Add an announcement banner if the local branch is 'main' - the dev release
+command = ["git", "branch", "--show-current"]
+process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+stdout, stderr = process.communicate()
+branch = stdout.strip()
+if branch == "main":
+    html_theme_options["announcement"] = "<b>Attention:</b> These docs are built from the 'main' branch."

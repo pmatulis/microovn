@@ -23,7 +23,7 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    D(["v1.16"])
    E(["reference"])
    F(["main"])
-   H(["public"])
+   G(["public"])
    H(["pristine"])
 
    click A "https://app.readthedocs.com/organizations/isovalent/"
@@ -43,7 +43,7 @@ contributions, suggestions, fixes and constructive feedback and :doc:`Reference
    A --> G
    A --> H
 
-   style F fill:#BBDEFB
+   style G fill:#BBDEFB
 
 .. toctree::
 
